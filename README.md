@@ -1,1 +1,16 @@
-# Detecting-Gender-Bias
+# Detecting-Gender-Bias #
+
+## Introduction: ##
+
+The prevalence of biases in AI/ML models has become a critical concern in recent years. AI/ML models are deployed in various decision-making processes including but not limited to credit scoring, criminal justice system, advertising, medical testing & diagnosis, etc. These models analyze a variety of factors, including education, work, socioeconomic background, gender, race, and personality traits. However, there are concerns that these models may perpetuate bias by relying on historical data that may contain discriminatory patterns. In this project, we've tried to investigate the impact of gender bias on image classification, specifically in the domains of healthcare (doctors-nurses) and aviation (pilots-flight attendants). We could see a spike in performance of the SVM model, when training and testing it with our biased datasets. We then employed SHAP (SHapley Additive exPlanations) method to identify the most influential features in the model's decision-making process. Our findings provide valuable insights into:
+* The extent to which bias can influence the model's performance
+* How gender-specific features contribute highly towards image classification
+* Emphasize the need for fairer and more transparent AI/ML practices.
+
+## Results and Observations: ##
+
+One of the most significant challenges we encountered in this project was assembling a gender and race-neutral dataset. From the census analysis, we can see that only 8% of the workforce is women pilots. Additionally, less than 15% of pilots come from diverse racial backgrounds, including Black, Asian, Hispanic, or other races. Similarly, the flight attendant workforce also exhibited a similar trend, with only 23% male diversity and 37% of individuals belonging to the mentioned racial groups.
+Our results highlight the impact of bias on the performance of the model. It revealed that the SVM model's performance improved by 4-6% when working with biased datasets. Notably, the model performed exceptionally well on the biased dataset representative of our census analysis, suggesting that it may better align with real-world scenarios where bias is present. It's worth noting that the dataset used in our experiment was smaller than those used in real-time decision-making processes. Additionally, we chose the SVM model due to its interpretability, whereas other models may be used in real-time. Therefore, it's essential to test how these models perform against biased datasets.
+
+Based on the SHAP plot results included in this paper, we can clearly see how gender-stereotypical features play a very important role in image classification. Our SHAP results also showed nearly 50 other gender-stereotypical features such as lipstick, makeover, eyebrow, layered hair, thigh, jewelry, mustache, facial hair, physical fitness, and so on, that contributed highly towards classification.
+These findings demonstrate the importance of creating fairer datasets and developing fairer ML models, as well as the significance of explainability. It is essential that we work towards using interpretable models to later evaluate if they perform fairly. This can increase the public's trust in large-scale AI/ML models, which are often used in decision-making processes. In conclusion, our study highlights the need for greater attention toward fairer and more transparent AI/ML models.
